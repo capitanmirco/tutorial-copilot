@@ -1,0 +1,41 @@
+<div class="home-container">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Benvenuto nel Tutorial di GitHub Copilot</h1>
+      <p>Impara come utilizzare Copilot per migliorare la tua produttività come sviluppatore</p>
+      <button class="cta-button">Inizia ad imparare</button>
+    </div>
+    <div class="hero-image">
+      <img src="assets/images/copilot-hero.png" alt="GitHub Copilot">
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Caratteristiche di GitHub Copilot</h2>
+    <div class="feature-cards">
+      <div class="feature-card" *ngFor="let feature of features">
+        <div class="feature-icon">{{ feature.icon }}</div>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="get-started">
+    <h2>Come iniziare con Copilot</h2>
+    <ol class="steps">
+      <li>
+        <h3>Installa l'estensione</h3>
+        <p>Installa l'estensione GitHub Copilot per VS Code dal marketplace.</p>
+      </li>
+      <li>
+        <h3>Configura l'accesso</h3>
+        <p>Accedi con il tuo account GitHub e configura l'accesso.</p>
+      </li>
+      <li>
+        <h3>Inizia a scrivere codice</h3>
+        <p>Copilot inizierà automaticamente a suggerire codice mentre scrivi.</p>
+      </li>
+    </ol>
+  </section>
+</div>

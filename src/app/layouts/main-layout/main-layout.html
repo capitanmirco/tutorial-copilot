@@ -1,0 +1,21 @@
+<div class="main-layout">
+  <header class="header">
+    <div class="logo">
+      <h1>{{ title }}</h1>
+    </div>    <nav class="main-nav">
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a routerLink="/examples" routerLinkActive="active">Examples</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <!-- Qui verrà inserito il contenuto della pagina -->
+    <router-outlet></router-outlet>
+  </main>
+  <footer class="footer">
+    <p>© 2025 Tutorial Copilot - Esempio di utilizzo di GitHub Copilot</p>
+  </footer>
+</div>

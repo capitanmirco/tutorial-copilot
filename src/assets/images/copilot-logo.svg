@@ -1,0 +1,6 @@
+<!-- Note: Questo è un esempio rappresentativo di un'immagine SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="90" fill="#3498db" />
+  <path d="M100 50 L130 150 L70 150 Z" fill="white" />
+  <circle cx="100" cy="80" r="20" fill="white" />
+</svg>

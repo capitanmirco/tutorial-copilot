@@ -1,0 +1,115 @@
+<div class="examples-container">
+  <h1>Esempi di Codice con Copilot</h1>
+  <p class="intro-text">
+    Esplora questi esempi per vedere come GitHub Copilot può aiutarti a scrivere codice più rapidamente.
+    Seleziona uno degli esempi dalla lista per visualizzare il codice suggerito da Copilot.
+  </p>
+
+  <div class="tabs">
+    <div class="tab" [class.active]="selectedTab === 'tab1'" (click)="selectedTab = 'tab1'">Esempi di Codice</div>
+    <div class="tab" [class.active]="selectedTab === 'tab2'" (click)="selectedTab = 'tab2'">Come Utilizzare Copilot</div>
+    <div class="tab" [class.active]="selectedTab === 'tab3'" (click)="selectedTab = 'tab3'">Consigli e Trucchi</div>
+  </div>
+
+  <div class="tab-content">
+    <!-- Tab 1: Esempi di Codice -->
+    <div *ngIf="selectedTab === 'tab1'" class="examples-content">
+      <div class="examples-sidebar">
+        <h3>Seleziona un esempio</h3>
+        <ul class="example-list">
+          <li *ngFor="let example of codeExamples" 
+              [class.selected]="selectedExample.id === example.id"
+              (click)="selectExample(example)">
+            {{ example.title }}
+          </li>
+        </ul>
+      </div>
+      
+      <div class="example-display">
+        <h2>{{ selectedExample.title }}</h2>
+        <p>{{ selectedExample.description }}</p>          <div class="code-container">
+          <div class="code-header">
+            <span class="language-label">{{ selectedExample.language }}</span>
+          </div>
+          <pre class="code-block"><code [innerHTML]="selectedExample.code"></code></pre>
+        </div>
+        
+        <div class="example-notes">
+          <h4>Come è stato generato:</h4>
+          <p>Questo codice è stato generato chiedendo a Copilot di creare un esempio di {{ selectedExample.title.toLowerCase() }}. 
+             Copilot ha analizzato il contesto della richiesta e ha generato un esempio funzionante.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tab 2: Come Utilizzare Copilot -->
+    <div *ngIf="selectedTab === 'tab2'" class="tutorial-content">
+      <h2>Come Utilizzare GitHub Copilot</h2>
+        <div class="step">
+        <h3>1. Inserisci un commento descrittivo</h3>
+        <p>Descrivi cosa vuoi ottenere con un commento chiaro e dettagliato.</p>
+        <div class="code-container">
+          <pre class="code-block"><code>// Crea una funzione che calcola la media di un array di numeri</code></pre>
+        </div>
+      </div>
+      
+      <div class="step">
+        <h3>2. Lascia che Copilot generi il codice</h3>
+        <p>Premi Tab o accetta il suggerimento quando appare.</p>
+        <div class="code-container">
+          <pre class="code-block"><code>// Crea una funzione che calcola la media di un array di numeri
+function calculateAverage(numbers) {{ '{' }}
+  const sum = numbers.reduce((acc, num) => acc + num, 0);
+  return sum / numbers.length;
+{{ '}' }}</code></pre>
+        </div>
+      </div>
+      
+      <div class="step">
+        <h3>3. Itera e raffina</h3>
+        <p>Aggiungi più commenti o modifica il codice per ottenere risultati migliori.</p>
+        <div class="code-container">
+          <pre class="code-block"><code>// Crea una funzione che calcola la media di un array di numeri
+// Gestisci il caso di array vuoto
+function calculateAverage(numbers) {{ '{' }}
+  if (numbers.length === 0) {{ '{' }}
+    return 0;
+  {{ '}' }}
+  const sum = numbers.reduce((acc, num) => acc + num, 0);
+  return sum / numbers.length;
+{{ '}' }}</code></pre>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tab 3: Consigli e Trucchi -->
+    <div *ngIf="selectedTab === 'tab3'" class="tips-content">
+      <h2>Consigli e Trucchi per GitHub Copilot</h2>
+      
+      <div class="tip-card">
+        <h3>Sii specifico nei commenti</h3>
+        <p>Più dettagliati sono i tuoi commenti, migliori saranno i suggerimenti di Copilot. Includi dettagli come tipi di dati, comportamenti attesi e casi limite.</p>
+      </div>
+      
+      <div class="tip-card">
+        <h3>Usa i docstring e i JSDoc</h3>
+        <p>Formattare i commenti come docstring o JSDoc può aiutare Copilot a generare codice migliore con tipi corretti.</p>
+      </div>
+      
+      <div class="tip-card">
+        <h3>Inserisci firme di funzioni</h3>
+        <p>Scrivere solo la firma della funzione (nome e parametri) può essere sufficiente per far generare a Copilot un'implementazione.</p>
+      </div>
+      
+      <div class="tip-card">
+        <h3>Usa Copilot per i test</h3>
+        <p>Copilot eccelle nel generare casi di test per il tuo codice. Basta chiedere di creare test per una determinata funzione.</p>
+      </div>
+      
+      <div class="tip-card">
+        <h3>Rifiuta e riprova</h3>
+        <p>Se il suggerimento non è quello che desideri, rifiutalo e riprova. Copilot mostrerà soluzioni alternative.</p>
+      </div>
+    </div>
+  </div>
+</div>

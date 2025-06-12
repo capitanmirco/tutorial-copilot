@@ -1,0 +1,220 @@
+.examples-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.examples-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+/* Tabs styling */
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #ecf0f1;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: #7f8c8d;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  color: #3498db;
+}
+
+.tab.active {
+  color: #3498db;
+  border-bottom: 3px solid #3498db;
+  margin-bottom: -2px;
+}
+
+/* Tab 1: Code Examples */
+.examples-content {
+  display: flex;
+  gap: 2rem;
+  min-height: 600px;
+}
+
+.examples-sidebar {
+  flex: 1;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.examples-sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.example-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.example-list li {
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.example-list li:hover {
+  background-color: #ecf0f1;
+}
+
+.example-list li.selected {
+  background-color: #3498db;
+  color: white;
+}
+
+.example-display {
+  flex: 3;
+}
+
+.example-display h2 {
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.example-display > p {
+  margin-bottom: 1.5rem;
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+.code-container {
+  background-color: #2c3e50;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.code-header {
+  background-color: #34495e;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.language-label {
+  color: #ecf0f1;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.code-block {
+  padding: 1.5rem;
+  margin: 0;
+  overflow-x: auto;
+  color: #ecf0f1;
+  font-family: monospace;
+  line-height: 1.5;
+}
+
+.example-notes {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.example-notes h4 {
+  margin-top: 0;
+  color: #2c3e50;
+  margin-bottom: 0.8rem;
+}
+
+.example-notes p {
+  margin: 0;
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+/* Tab 2: Tutorial Content */
+.tutorial-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.step {
+  margin-bottom: 2.5rem;
+}
+
+.step h3 {
+  color: #3498db;
+  margin-bottom: 1rem;
+}
+
+.step p {
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Tab 3: Tips Content */
+.tips-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.tip-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tip-card h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.tip-card p {
+  color: #7f8c8d;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .examples-content {
+    flex-direction: column;
+  }
+  
+  .tips-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
